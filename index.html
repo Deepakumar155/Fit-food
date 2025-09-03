@@ -1,0 +1,1712 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fit and Food Tamil</title>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="Static/About.css">
+  <link rel="stylesheet" href="Static/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  
+  <link rel="icon" href="Assets/logo.jpg" type="image/x-icon">
+</head>
+<body>
+  <!-- Top Strip -->
+  <div class="top-bar">
+    FSSAI Licensed: 12422012002821 | NABL Approved Lab Tested Products | Quality & Safety Assured
+  </div>
+  <!-- Header -->
+<header class="site-header">
+  <!-- Top Green Bar -->
+
+
+  <!-- Main Header -->
+  <div class="header-inner">
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <!-- Main Menu -->
+  <div class="menu-panel active" id="mainMenu">
+    <div class="menu-header">
+      <h2>Menu</h2>
+      <button class="close-btn" onclick="toggleMenu()">✕</button>
+    </div>
+    <ul class="menu-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#" onclick="openPanel('collectionsMenu')" style="display:inline-flex;">Our Collections</a></li>
+      <li><a href="Template/About.html">About Us</a></li>
+      <li><a href="Template/contact.html">Contact Us</a></li>
+      <li><a href="Template/login.html">Account</a></li>
+    </ul>
+  </div>
+
+  <!-- Submenu Panel -->
+  <div class="menu-panel" id="collectionsMenu">
+    <div class="menu-header">
+      <button class="back-btn" onclick="openPanel('mainMenu')"> Back</button>
+    </div>
+    <ul class="menu-list">
+      <li><a href="Template/BestSeller.html">Best Sellers</a></li>
+      <li><a href="Template/babycare.html">Baby Care Powders</a></li>
+      <li><a href="Template/skincare.html">Skin Care Powders</a></li>
+      <li><a href="Template/haircare.html">Hair Care Powders</a></li>
+      <li><a href="Template/healthdrink.html">Health Drink Powders</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+    <!-- Logo -->
+    <img src="Assets/BestSeller/fit and foo logo.avif" alt="logo" class="logo" />
+
+    <!-- Search Bar -->
+    <div class="search-wrap">
+      <input type="text" class="search" placeholder="Search..." onkeyup="filterResults()" />
+      <button class="search-btn" aria-label="Search"><span><i class="fas fa-search"></i></span></button>
+    </div>
+    <!-- Icons -->
+   <!-- Icons -->
+<div class="header-icons">
+  <div class="im">
+  <a href="Template/login.html">
+    <span class="icon">
+      <img src="Assets/user.png" alt="Account" title="Account" width="20px" height="20px" class="img1">
+    </span>
+  </a>
+  </div>
+<div class="im1">
+  <a onclick="toggleSearch()">
+    <span class="icon"><i class="fas fa-search"></i></span>
+  </a>
+</div>
+<div class="im2">
+  <a href="#" id="cart-btn">
+    <span class="icon">
+      <img src="Assets/shopping-cart.png" alt="Cart" width="20px" height="20px">
+    </span>
+  </a>
+  </div>
+</div>
+
+<!-- 🔑 Move search overlay outside -->
+<div class="mobile-search-overlay" id="mobileSearch">
+  <input type="text" placeholder="Search products..." />
+  <span class="icon1"><i class="fas fa-search"></i></span>
+</div>
+
+    <!-- Mobile Menu Toggle -->
+    
+  </div>
+
+  <!-- Navigation Links -->
+  <nav class="nav-links">
+  <a href="index.html">Home</a>
+
+  <!-- Dropdown -->
+  <div class="dropdown">
+    <a href="#">Our Collections <span class="caret">⌵</span></a>
+    <div class="dropdown-menu">
+      <div class="menu-columns">
+        <ul>
+          <li><a href="Template/BestSeller.html">Best Sellers</a></li>
+          <li><a href="Template/babycare.html">Baby Care Powders</a></li>
+          <li><a href="Template/skincare.html">Skin Care Powders</a></li>
+          <li><a href="Template/haircare.html">Hair Care Powders</a></li>
+          <li><a href="Template/healthdrink.html">Health Drink Powders</a></li>
+          <li><a href="#">Weight Gain Powders</a></li>
+          <li><a href="#">Weight Loss Powders</a></li>
+          <li><a href="#">Combo Products</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Traditional</a></li>
+          <li><a href="#">Healthy Foods</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <a href="Template/About.html" >About Us</a>
+  <a href="Template/contact.html">Contact Us</a>
+</nav>
+
+
+</header>
+
+
+ <!-- Sidebar Cart -->
+<!-- Cart Sidebar -->
+<div class="cart-sidebar" id="cart-sidebar">
+  <!-- Top Navigation -->
+  <div class="cart-header">
+    <button class="back-link" id="back-link">← Continue shopping</button>
+  </div>
+
+  <!-- Order Summary -->
+  <div class="cart-summary">
+    <div class="order-header">
+      <h3>Your Order</h3>
+      <a href="checkout.html" class="view-cart">View cart</a>
+    </div>
+    <div class="subtotal">
+      <span>Subtotal:</span>
+      <span class="subtotal-price">Rs. 360.00</span>
+    </div>
+    <button class="checkout-btn" onclick="window.location.href='Template/checkout.html'">
+  Checkout
+</button>
+  </div>
+
+  <!-- Products -->
+  <div class="cart-products">
+    <div class="products-header" id="products-header">
+      <h4>Products <span id="product-count">(1)</span></h4>
+      <span class="toggle">⌵</span>
+    </div>
+
+    <div class="cart-item" data-price="360">
+      <img src="Assets/BestSeller/karuppu.jpg" alt="Product">
+      <div class="item-info">
+        <p class="item-name">Karuppu Kavuni Kanji Mix</p>
+        <small class="item-weight">250gms</small>
+        <p class="item-price">Rs. <span class="item-total">360</span>.00</p>
+        
+        <div class="quantity-controls">
+          <button class="qty-btn minus">-</button>
+          <span class="qty">1</span>
+          <button class="qty-btn plus">+</button>
+          <a href="#" class="remove">Remove</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="slider">
+  <div class="slides">
+    <!-- Original slides -->
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food_ABC_Mix_Banner_Desktop_1512x.png?v=1720094634" alt="Slide 1">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food_Kuruppu_Ulunthu_Kanji_Mix_Powder_Desktop_1512x.png?v=1733471566" alt="Slide 2">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food_Premium__Shikakai_Powder_Desktop_1512x.jpg?v=1750922067" alt="Slide 3">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food_Biotin_Powder_Desktop_1512x.png?v=1720094634" alt="Slide 4">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food_Premium_Kuliyal_Powder_Banner_Desktop_1512x.jpg?v=1750921944" alt="Slide 5">
+    <!-- Clone of first slide for smooth looping -->
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food_ABC_Mix_Banner_Desktop_1512x.png?v=1720094634" alt="Slide 1 clone">
+  </div>
+
+  <!-- Controller inside image -->
+  <div class="buttons">
+    <button onclick="goToSlide(0)" class="active"></button>
+    <button onclick="goToSlide(1)"></button>
+    <button onclick="goToSlide(2)"></button>
+    <button onclick="goToSlide(3)"></button>
+    <button onclick="goToSlide(4)"></button>
+  </div>
+</div>
+  <div class="chat-bar" role="region" aria-label="Chat with us">
+    <a  href="https://wa.me/919363599986" target="blank" title="WhatsApp">
+<i class="fa-regular fa-comment-dots"></i></a>
+    <div>      
+      <p><a  href="https://wa.me/919363599986" target="blank">Chat With Us</a></p>
+      <p><a  href="https://wa.me/919363599986" target="blank" >Talk to our team via chat</a></p>
+    </div>
+  </div>
+  <section class="best-sellers" aria-label="Best Sellers">
+    <h2>Best Sellers</h2>
+    <div class="products-grid">
+      <article class="product-card">
+        <img
+          src="https://storage.googleapis.com/a1aa/image/e3c469db-98c5-41d3-c588-293f6085b535.jpg"
+          alt="ABC Malt Powder package on a wooden plate with yellow label"
+          width="100"
+          height="120"
+          loading="lazy"
+        />
+        <p class="product-name">ABC Malt Powder</p>
+        <div class="product-reviews" aria-label="254 reviews, 5 stars">
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <span>254 reviews</span>
+        </div>
+        <p class="product-price">From Rs. 365.00</p>
+        <button class="product-button" aria-label="Show options for ABC Malt Powder">
+          Show options
+        </button>
+      </article>
+      <article class="product-card">
+        <img
+          src="https://storage.googleapis.com/a1aa/image/b2123f61-945e-4353-4bde-6c9c69e845a7.jpg"
+          alt="Karuppu Kavuni Kanji Mix package on a wooden plate with yellow label"
+          width="100"
+          height="120"
+          loading="lazy"
+        />
+        <p class="product-name">Karuppu Kavuni Kanji </p>
+        <div class="product-reviews" aria-label="219 reviews, 4.5 stars">
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star-half-alt" aria-hidden="true"></i>
+          <span>219 reviews</span>
+        </div>
+        <p class="product-price">From Rs. 360.00</p>
+        <button class="product-button" aria-label="Show options for Karuppu Kavuni Kanji Mix">
+          Show options
+        </button>
+      </article>
+      <article class="product-card">
+        <img
+          src="https://storage.googleapis.com/a1aa/image/e32af273-8759-4133-4f54-ed493e84a151.jpg"
+          alt="Biotin Powder package on a wooden plate with yellow label"
+          width="100"
+          height="120"
+          loading="lazy"
+        />
+        <p class="product-name">Biotin Powder</p>
+        <div class="product-reviews" aria-label="52 reviews, 4.5 stars">
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star-half-alt" aria-hidden="true"></i>
+          <span>52 reviews</span>
+        </div>
+        <p class="product-price">From Rs. 299.00</p>
+        <button class="product-button" aria-label="Show options for Biotin Powder">
+          Show options
+        </button>
+      </article>
+      <article class="product-card">
+        <img
+          src="https://storage.googleapis.com/a1aa/image/542d9935-6238-42f9-4219-fbea8ba437eb.jpg"
+          alt="Nalungu Maavu package on a wooden plate with yellow label"
+          width="100"
+          height="120"
+          loading="lazy"
+        />
+        <p class="product-name">Nalungu Maavu</p>
+        <div class="product-reviews" aria-label="39 reviews, 5 stars">
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <span>39 reviews</span>
+        </div>
+        <p class="product-price">From Rs. 350.00</p>
+        <button class="product-button" aria-label="Show options for Nalungu Maavu">
+          Show options
+        </button>
+      </article>
+    </div>
+  </section>
+  <div class="welcome-banner" aria-label="Welcome banner">
+    <img
+      src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit-Food-Banner_87233877-7778-4e92-8a8f-a54870e82f4e_1296x.jpg?v=1743071650"
+      alt="Welcome to Fit and Food Tamil banner with green leaves background and text about healthy food and social media icons"
+      loading="lazy"
+    />
+  </div>
+<section class="our-care" aria-label="Our Care">
+  <h2>Our Care</h2>
+  <div class="our-care-scroll-wrapper">
+    <button class="slider-btn prev">&#10094;</button>
+    <div class="our-care-scroll" id="slider2">
+      <!-- All your cards -->
+      <article class="our-care-item">
+        <img src="https://storage.googleapis.com/a1aa/image/683a2fa5-48f6-4415-9a2d-269b5922c4df.jpg" alt="Weight Gain"/>
+        <p>Weight Gain</p>
+      </article>
+      <article class="our-care-item">
+        <img src="https://storage.googleapis.com/a1aa/image/cd3f2310-ef09-4c79-a3e8-bf209cff6a76.jpg" alt="Best Sellers"/>
+        <p>Best Sellers</p>
+      </article>
+      <article class="our-care-item">
+        <img src="https://storage.googleapis.com/a1aa/image/10801eac-d34b-489d-25f6-b70113628491.jpg" alt="Combo"/>
+        <p>Combo</p>
+      </article>
+      <article class="our-care-item">
+        <img src="https://storage.googleapis.com/a1aa/image/ced4dd15-840d-4ef2-5a71-523704f431b9.jpg" alt="Traditional Healthy"/>
+        <p>Traditional Healthy</p>
+      </article>
+      <article class="our-care-item">
+        <img src="https://www.fitandfoodtamil.com/cdn/shop/collections/Baby_Care_2_400x.png?v=1729245742" alt="Baby Care"/>
+        <p>Baby Care</p>
+      </article>
+      <article class="our-care-item">
+        <img src="https://www.fitandfoodtamil.com/cdn/shop/collections/Hair_Care_Powders_2_400x.png?v=1729245726" alt="Haircare"/>
+        <p>Haircare</p>
+      </article>
+      <article class="our-care-item">
+        <img src="https://www.fitandfoodtamil.com/cdn/shop/collections/Weight_Loss_Powders_2_400x.png?v=1729245800" alt="Weightloss"/>
+        <p>Weightloss</p>
+      </article>
+      <!-- clones for looping -->
+      <article class="our-care-item">
+        <img src="https://www.fitandfoodtamil.com/cdn/shop/collections/Weight_Gain_2_400x.png?v=1729245814" alt="Weight Gain Clone"/>
+        <p>Weight Gain</p>
+      </article>
+      <article class="our-care-item">
+        <img src="https://storage.googleapis.com/a1aa/image/cd3f2310-ef09-4c79-a3e8-bf209cff6a76.jpg" alt="Best Sellers Clone"/>
+        <p>Best Sellers</p>
+      </article>
+    </div>
+  <button class="slider-btn next">&#10095;</button>
+  </div>
+</section>
+<div class="container">
+  <h2>Shop by Videos</h2>
+
+  <div class="carousel-wrapper">
+    <!-- Left Button -->
+    <button class="scroll-btn left" id="scrollPrev">❮</button>
+
+    <!-- Scrollable Carousel -->
+    <div class="carousel" id="videoCarousel">
+
+      <!-- Product 1 -->
+      <div class="card">
+        <video src="https://cdn.shopify.com/s/files/1/0868/2297/7824/files/reelUp_yhdccd79cb1742017284807_low.mp4?v=1742017303" muted loop autoplay playsinline></video>
+        <div class="card-content">
+          <p class="card-title">ABC Malt Powder</p>
+          <p class="card-price">Rs. 365.00</p>
+          <button class="btn-add">Add to cart <i class="fas fa-caret-down"></i></button>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="card">
+        <video src="https://cdn.shopify.com/s/files/1/0868/2297/7824/files/reelUp_j3jyqgoe9ne1742017412203_short.mp4?v=1742017420" muted loop autoplay playsinline></video>
+        <div class="card-content">
+          <p class="card-title">Karuppu Kavuni Kanji Mix</p>
+          <p class="card-price">Rs. 360.00</p>
+          <button class="btn-add">Add to cart <i class="fas fa-caret-down"></i></button>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="card">
+        <video src="https://cdn.shopify.com/s/files/1/0868/2297/7824/files/reelUp_zkjsrrcwvt91742215705656_short.mp4?v=1742215714" muted loop autoplay playsinline></video>
+        <div class="card-content">
+          <p class="card-title">Biotin Powder</p>
+          <p class="card-price">Rs. 299.00</p>
+          <button class="btn-add">Add to cart <i class="fas fa-caret-down"></i></button>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="card">
+        <video src="https://cdn.shopify.com/s/files/1/0868/2297/7824/files/reelUp_7vkt7mboipw1742018328664_short.mp4?v=1742018343" muted loop autoplay playsinline></video>
+        <div class="card-content">
+          <p class="card-title">Pirandai powder</p>
+          <p class="card-price">Rs. 320.00</p>
+          <button class="btn-add">Add to cart <i class="fas fa-caret-down"></i></button>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="card">
+        <video src="https://cdn.shopify.com/s/files/1/0868/2297/7824/files/reelUp_p3d0dq3m121742215774206_short.mp4?v=1742215787" muted loop autoplay playsinline></video>
+        <div class="card-content">
+          <p class="card-title">Avarampoo drink powder</p>
+          <p class="card-price">Rs. 280.00</p>
+          <button class="btn-add">Add to cart <i class="fas fa-caret-down"></i></button>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="card">
+        <video src="https://cdn.shopify.com/s/files/1/0868/2297/7824/files/reelUp_am47yqoba31742215327455_short.mp4?v=1742215338" muted loop autoplay playsinline></video>
+        <div class="card-content">
+          <p class="card-title">Karupu ulunthu kanji powder</p>
+          <p class="card-price">Rs. 310.00</p>
+          <button class="btn-add">Add to cart <i class="fas fa-caret-down"></i></button>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="card">
+        <video src="https://cdn.shopify.com/s/files/1/0868/2297/7824/files/reelUp_yhdccd79cb1742017284807_low.mp4?v=1742017303" muted loop autoplay playsinline></video>
+        <div class="card-content">
+          <p class="card-title">Shikakai Powder</p>
+          <p class="card-price">Rs. 250.00</p>
+          <button class="btn-add">Add to cart <i class="fas fa-caret-down"></i></button>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="card">
+        <video src="https://cdn.shopify.com/s/files/1/0868/2297/7824/files/reelUp_7vkt7mboipw1742018328664_short.mp4?v=1742018343" muted loop autoplay playsinline></video>
+        <div class="card-content">
+          <p class="card-title">Moringa Leaf Powder</p>
+          <p class="card-price">Rs. 270.00</p>
+          <button class="btn-add">Add to cart <i class="fas fa-caret-down"></i></button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right Button -->
+    <button class="scroll-btn right" id="scrollNext">❯</button>
+  </div>
+</div>
+<div class="middle-grid">
+  <!-- Skin Care -->
+  <div class="relative">
+    <video autoplay muted loop playsinline>
+      <source src="//www.fitandfoodtamil.com/cdn/shop/videos/c/vp/a2e42ff497e746a3826539fc340ec484/a2e42ff497e746a3826539fc340ec484.HD-720p-1.6Mbps-31777905.mp4?v=0
+" type="video/mp4">
+      Your browser does not support video.
+    </video>
+    <div class="label-top-left">Skin Care</div>
+  </div>
+
+  <!-- Hair Care -->
+  <div class="relative">
+    <video autoplay muted loop playsinline>
+      <source src="https://cdn.shopify.com/s/files/1/0868/2297/7824/files/reelUp_yhdccd79cb1742017284807_low.mp4?v=1742017303" type="video/mp4">
+      Your browser does not support video.
+    </video>
+    <div class="label-top-left">Hair Care</div>
+  </div>
+
+  <!-- Weight Loss -->
+  <div class="relative">
+    <video autoplay muted loop playsinline>
+      <source src="https://cdn.shopify.com/s/files/1/0868/2297/7824/files/reelUp_am47yqoba31742215327455_short.mp4?v=1742215338" type="video/mp4">
+      Your browser does not support video.
+    </video>
+    <div class="label-top-left">Weight Loss</div>
+  </div>
+</div>
+
+<div class="section-header">
+  <h3>Skin Care Powders</h3>
+  <a href="#">View all</a>
+</div>
+
+<div class="product-list">
+  <div class="product-item">
+    <img src="https://storage.googleapis.com/a1aa/image/6b9539ed-88ea-466a-34fa-a3ef3d3bb824.jpg" alt="ABC Malt Powder" />
+    <p class="product-name">ABC Malt Powder</p>
+    <div class="reviews">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <span>254 reviews</span>
+    </div>
+    <p class="price">From Rs :₹250</p>
+    <button class="btn">Add to Cart</button>
+  </div>
+
+  <div class="product-item">
+    <img src="https://storage.googleapis.com/a1aa/image/54e4c1a9-8b6e-43a1-3eb8-730b3c48b0c7.jpg" alt="Premium Kuliyal Podi" />
+    <p class="product-name">Premium Kuliyal Podi</p>
+    <div class="reviews">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <span>32 reviews</span>
+    </div>
+    <p class="price">From Rs :₹250</p>
+    <button class="btn">Add to Cart</button>
+  </div>
+
+  <div class="product-item">
+    <img src="https://storage.googleapis.com/a1aa/image/030482db-5849-48c7-c1f8-b55e12415f64.jpg" alt="Nalungu Maavu" />
+    <p class="product-name">Nalungu Maavu</p>
+    <div class="reviews">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <span>39 reviews</span>
+    </div>
+    <p class="price">From Rs :₹250</p>
+    <button class="btn">Add to Cart</button>
+  </div>
+
+  <div class="product-item">
+    <img src="https://storage.googleapis.com/a1aa/image/5f492b10-fefd-45a2-91a8-e07d6cf7d11d.jpg" alt="Biotin Powder" />
+    <p class="product-name">Biotin powder</p>
+    <div class="reviews">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <span>152 reviews</span>
+    </div>
+    <p class="price">From Rs :₹250</p>
+    <button class="btn">Add to Cart</button>
+  </div>
+
+  <div class="product-item">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/01_c3175527-856d-4892-b5cf-dc538386bafc_220x.jpg?v=1721027684" alt="Avarampoo rose bath powder" />
+    <p class="product-name">Avarampoo Rose bath powder</p>
+    <div class="reviews">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <span>45 reviews</span>
+    </div>
+    <p class="price">From Rs :₹250</p>
+    <button class="btn">Add to Cart</button>
+  </div>
+</div>
+<div class="section-header">
+  <h3>Hair Care Powders</h3>
+</div>
+
+<div class="product-list">
+  <div class="product-item">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/01_a22d8555-48b2-488e-8ac0-16bb41465439_220x.jpg?v=1721026819" alt="ABC Malt Powder" />
+    <p class="product-name">Biotin powder</p>
+    <div class="reviews">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <span>254 reviews</span>
+    </div>
+    <p class="price">From Rs :₹250</p>
+    <button class="btn">Add to Cart</button>
+  </div>
+
+  <div class="product-item">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/01_0a94fd4e-be31-4d6d-8895-1777cb183258_220x.jpg?v=1721028273" alt="Premium Kuliyal Podi" />
+    <p class="product-name">Shikakai powder</p>
+    <div class="reviews">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <span>32 reviews</span>
+    </div>
+    <p class="price">From Rs :₹250</p>
+    <button class="btn">Add to Cart</button>
+  </div>
+
+  <div class="product-item">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/01_5105535e-c131-46ad-9eca-e0d28482920d_220x.jpg?v=1721027717" alt="Nalungu Maavu" />
+    <p class="product-name">Curry leaves powder</p>
+    <div class="reviews">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <span>39 reviews</span>
+    </div>
+    <p class="price">From Rs :₹250</p>
+    <button class="btn">Add to Cart</button>
+  </div>
+
+  <div class="product-item">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/01_81040537-516a-49ce-b17e-fa8c47e83ebe_220x.jpg?v=1721028237" alt="Biotin Powder" />
+    <p class="product-name">Premium Shikakai powder</p>
+    <div class="reviews">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <span>152 reviews</span>
+    </div>
+    <p class="price">From Rs :₹250</p>
+    <button class="btn">Add to Cart</button>
+  </div>
+
+  <div class="product-item">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/01_c3175527-856d-4892-b5cf-dc538386bafc_220x.jpg?v=1721027684" alt="Avarampoo rose bath powder" />
+    <p class="product-name">Moringa leaf powder</p>
+    <div class="reviews">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <span>45 reviews</span>
+    </div>
+    <p class="price">From Rs :₹250</p>
+    <button class="btn">Add to Cart</button>
+  </div>
+</div>
+<div class="section-header">
+  <h3>Weight Loss Powders</h3>
+</div>
+
+<div class="product-list">
+  <div class="product-item">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/01_6fc70697-86bf-4564-adc5-17a3a3dd9d52_220x.jpg?v=1721027208" alt="ABC Malt Powder" />
+    <p class="product-name">Karrupu kavuni kanji mix</p>
+    <div class="reviews">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <span>254 reviews</span>
+    </div>
+    <p class="price">From Rs :₹250</p>
+    <button class="btn">Add to Cart</button>
+  </div>
+
+  <div class="product-item">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/01_770836d9-9a1f-4d39-abb8-60e327f5dd18_220x.jpg?v=1721027274" alt="Premium Kuliyal Podi" />
+    <p class="product-name">Makhan dosa powder</p>
+    <div class="reviews">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <span>32 reviews</span>
+    </div>
+    <p class="price">From Rs :₹250</p>
+    <button class="btn">Add to Cart</button>
+  </div>
+
+  <div class="product-item">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/01_4cd97d44-88d7-42c6-95fe-f6fd502f153e_220x.jpg?v=1721026879" alt="Nalungu Maavu" />
+    <p class="product-name">Dry nuts protien powder</p>
+    <div class="reviews">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <span>39 reviews</span>
+    </div>
+    <p class="price">From Rs :₹250</p>
+    <button class="btn">Add to Cart</button>
+  </div>
+
+  <div class="product-item">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/01_14678329-2adf-44b0-b8a3-27b3b1ca0c8d_220x.jpg?v=1721027505" alt="Biotin Powder" />
+    <p class="product-name">Ragi sprouts powder</p>
+    <div class="reviews">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <span>152 reviews</span>
+    </div>
+    <p class="price">From Rs :₹250</p>
+    <button class="btn">Add to Cart</button>
+  </div>
+
+  <div class="product-item">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/01_4e7400c3-7921-4793-aef4-1db4954ae897_220x.jpg?v=1721027253" alt="Avarampoo rose bath powder" />
+    <p class="product-name">Horse gram dosa powder</p>
+    <div class="reviews">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <span>45 reviews</span>
+    </div>
+    <p class="price">From Rs :₹250</p>
+    <button class="btn">Add to Cart</button>
+  </div>
+</div>
+
+<section class="video-wrapper">
+  <div class="video-container" id="video-container">
+    <!-- Thumbnail image -->
+    <img
+      src="https://storage.googleapis.com/a1aa/image/6700e838-c858-4225-410e-44ef02618cd6.jpg"
+      alt="Person in blue saree holding dry roots in hands with brass bowl of flowers beside"
+    />
+
+    <!-- Play button -->
+    <button id="play-button" aria-label="Play video"
+      style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);
+             background: rgba(0,0,0,0.5); color:#fff; border-radius:50%; padding:12px; font-size:1.5rem; border:none; cursor:pointer;">
+      ▶
+    </button>
+  </div>
+
+  <div class="video-caption">
+    Vettiver tightens skin pore and reduces sweat smell
+  </div>
+</section>
+
+   <div class="container2">
+    <!-- Product top section -->
+    <div class="product-top">
+      <!-- Left side images -->
+      <div class="product-images">
+        <div class="main-image-wrapper">
+          <img
+            src="https://storage.googleapis.com/a1aa/image/d78e4c12-3c0f-416b-5e83-b27b16f18c78.jpg"
+            alt="Kuliyal Podi Bath Powder Nalungu Maavu product pouch standing on wooden round platform with yellow and white background"
+            width="400"
+            height="350"
+          />
+          <div class="label-yellow">Nalungu Maavu</div>
+          <div class="label-green">FIT &amp; FOOD TAMIL</div>
+        </div>
+        <div class="thumbnails" aria-label="Product thumbnails">
+          <img
+            src="https://storage.googleapis.com/a1aa/image/62fd0470-f417-4cfe-340a-6c472a050e41.jpg"
+            alt="Thumbnail image 1 showing Kuliyal Podi Bath Powder front view"
+            width="60"
+            height="60"
+          />
+          <img
+            src="https://storage.googleapis.com/a1aa/image/26c53bdd-52d5-4a4d-78bb-d11fdab20c5e.jpg"
+            alt="Thumbnail image 2 showing Kuliyal Podi Bath Powder side view with text"
+            width="60"
+            height="60"
+          />
+          <img
+            src="https://storage.googleapis.com/a1aa/image/7b38079a-1578-49b3-bfda-5b7c09c0cabe.jpg"
+            alt="Thumbnail image 3 showing Kuliyal Podi Bath Powder ingredients list"
+            width="60"
+            height="60"
+          />
+          <img
+            src="https://storage.googleapis.com/a1aa/image/5457a747-b040-4bd6-d69d-7a0cd422c1d5.jpg"
+            alt="Thumbnail image 4 showing Kuliyal Podi Bath Powder usage instructions"
+            width="60"
+            height="60"
+          />
+          <img
+            src="https://storage.googleapis.com/a1aa/image/23ed3d37-12aa-42ba-2da7-0ccaa609805f.jpg"
+            alt="Thumbnail image 5 showing Kuliyal Podi Bath Powder back packaging"
+            width="60"
+            height="60"
+          />
+        </div>
+      </div>
+      <!-- Right side product details -->
+      <div class="product-details">
+        <h2 class="product-title">Nalungu Maavu</h2>
+        <p class="product-price">Rs. 350.00</p>
+        <div class="stars" aria-label="Rating stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span class="reviews-count">39 reviews</span>
+        </div>
+        <label for="size">Size</label>
+        <select id="size" name="size" aria-label="Select size">
+          <option>250 gm</option>
+          <option>500 gm</option>
+          <option>1 kg</option>
+        </select>
+        <div class="qty-addcart">
+          <button aria-label="Decrease quantity" class="qty-btn" type="button">−</button>
+          <input
+            type="text"
+            class="qty-input"
+            value="1"
+            readonly
+            aria-live="polite"
+            aria-atomic="true"
+          />
+          <button aria-label="Increase quantity" class="qty-btn" type="button">+</button>
+          <button class="add-cart" type="button">Add to cart</button>
+        </div>
+        <a href="Template/AddToCart.html" class="full-details-link">Full details</a>
+      </div>
+    </div>
+
+    <!-- Goodness Values Section -->
+    <section class="goodness-section" aria-label="Goodness Values">
+      <h3 class="goodness-title">Goodness Values</h3>
+      <div class="goodness-list">
+        <div class="goodness-item">
+          <img
+            src="https://storage.googleapis.com/a1aa/image/28b756e1-5bad-4261-3f7a-e10bea1ef7d0.jpg"
+            alt="Icon representing clean, laboratory flask with leaves"
+            width="60"
+            height="60"
+          />
+          CLEAN
+        </div>
+        <div class="goodness-item">
+          <img
+            src="https://storage.googleapis.com/a1aa/image/1e7281d7-b166-461f-fbf0-7f398b8dbfde.jpg"
+            alt="Icon representing 100% organic, mortar and pestle"
+            width="60"
+            height="60"
+          />
+          100% ORGANIC
+        </div>
+        <div class="goodness-item">
+          <img
+            src="https://storage.googleapis.com/a1aa/image/b78a8fef-1a8a-49cb-4769-a09a941040c8.jpg"
+            alt="Icon representing socially responsible, hand holding coin"
+            width="60"
+            height="60"
+          />
+          SOCIALLY RESPONSIBLE
+        </div>
+        <div class="goodness-item">
+          <img
+            src="https://storage.googleapis.com/a1aa/image/803db5f6-743e-4544-912e-8793f8dfd873.jpg"
+            alt="Icon representing vegan, two leaves"
+            width="60"
+            height="60"
+          />
+          VEGAN
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+<section class="reviews-section" aria-label="Customer reviews">
+  <h3 class="reviews-title">
+    What Our Happy Customer Says <span>😍</span>
+  </h3>
+  <div class="reviews-stars" aria-label="Rating stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+    <span class="reviews-count-small">from 938 reviews</span>
+  </div>
+  <button
+    aria-label="Scroll left reviews"
+    class="scroll-btn scroll-left"
+    id="scrollLeftReviews"
+    type="button"
+  >
+    <i class="fas fa-chevron-left"></i>
+  </button>
+  <button
+    aria-label="Scroll right reviews"
+    class="scroll-btn scroll-right"
+    id="scrollRightReviews"
+    type="button"
+  >
+    <i class="fas fa-chevron-right"></i>
+  </button>
+  <div class="reviews-carousel scrollbar-hide" id="reviewsCarousel" tabindex="0">
+    <!-- Existing reviews (1-5) -->
+    <div class="review-card" role="article" aria-label="Customer review 1">
+      <div class="review-stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+      </div>
+      <p class="review-title">This is my second pack</p>
+      <p class="review-text">This is my second pack,</p>
+      <p class="review-author">Anonymous</p>
+      <p class="review-category">Biotin Powder</p>
+    </div>
+    <div class="review-card" role="article" aria-label="Customer review 2">
+      <div class="review-stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
+      <p class="review-title">Taste is</p>
+      <p class="review-text">Taste is ultimate</p>
+      <p class="review-author">MY yoga</p>
+      <p class="review-category">Biotin Powder</p>
+    </div>
+    <div class="review-card" role="article" aria-label="Customer review 3">
+      <div class="review-stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
+      <p class="review-title">Excellent product</p>
+      <p class="review-text">I have been using this for a month, very satisfied.</p>
+      <p class="review-author">S. Kumar</p>
+      <p class="review-category">Hair Care</p>
+    </div>
+    <div class="review-card" role="article" aria-label="Customer review 4">
+      <div class="review-stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <i class="fas fa-star-half-alt"></i>
+      </div>
+      <p class="review-title">Good value for money</p>
+      <p class="review-text">Works well and affordable price.</p>
+      <p class="review-author">R. Meena</p>
+      <p class="review-category">Skin Care</p>
+    </div>
+    <div class="review-card" role="article" aria-label="Customer review 5">
+      <div class="review-stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
+      <p class="review-title">Highly recommend</p>
+      <p class="review-text">My hair feels healthier and softer.</p>
+      <p class="review-author">K. Arjun</p>
+      <p class="review-category">Biotin Powder</p>
+    </div>
+
+    <!-- New reviews (6-8) -->
+    <div class="review-card" role="article" aria-label="Customer review 6">
+      <div class="review-stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <i class="fas fa-star-half-alt"></i>
+      </div>
+      <p class="review-title">Amazing results!</p>
+      <p class="review-text">I noticed a significant improvement in my skin within 2 weeks.</p>
+      <p class="review-author">Anita S.</p>
+      <p class="review-category">Skin Care</p>
+    </div>
+    <div class="review-card" role="article" aria-label="Customer review 7">
+      <div class="review-stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+      </div>
+      <p class="review-title">Worth every penny</p>
+      <p class="review-text">The biotin powder has improved my hair strength dramatically.</p>
+      <p class="review-author">Raghav P.</p>
+      <p class="review-category">Biotin Powder</p>
+    </div>
+    <div class="review-card" role="article" aria-label="Customer review 8">
+      <div class="review-stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
+      <p class="review-title">Superb quality</p>
+      <p class="review-text">Excellent packaging and the product works perfectly.</p>
+      <p class="review-author">Leena K.</p>
+      <p class="review-category">Hair Care</p>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Customer Trust Section -->
+    <section class="trust-section" aria-label="Customer trust">
+      <h3 class="trust-title">Customer Who Trust Us!</h3>
+      <button
+        aria-label="Scroll left trust images"
+        class="trust-scroll-btn trust-scroll-left"
+        id="scrollLeftBtn"
+        type="button"
+      >
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button
+        aria-label="Scroll right trust images"
+        class="trust-scroll-btn trust-scroll-right"
+        id="scrollRightBtn"
+        type="button"
+      >
+        <i class="fas fa-chevron-right"></i>
+      </button>
+      <div class="trust-carousel scrollbar-hide" id="carousel" tabindex="0">
+        <img
+          src="https://www.fitandfoodtamil.com/cdn/shop/files/image1_1_300x.png?v=1721893043"
+          alt="Screenshot of WhatsApp chat conversation with customer Keerthika about delivery and product usage"
+          class="trust-img"
+          width="500px"
+          height="600px"
+          loading="lazy"
+        />
+        <img
+          src="https://www.fitandfoodtamil.com/cdn/shop/files/image2_1_300x.png?v=1721893043"
+          alt="Screenshot of WhatsApp chat conversation with customer about eagerness to use product and feedback"
+          class="trust-img"
+          width="300"
+          height="400"
+          loading="lazy"
+        />
+        <img
+          src="https://www.fitandfoodtamil.com/cdn/shop/files/image4_300x.png?v=1721893043"
+          alt="Screenshot of WhatsApp chat conversation with customer about using shikakai powder and hair benefits"
+          class="trust-img"
+          width="300"
+          height="400"
+          loading="lazy"
+        />
+          <img
+          src="https://www.fitandfoodtamil.com/cdn/shop/files/image3_300x.png?v=1721893043"
+          alt="Screenshot of WhatsApp chat conversation with customer about using shikakai powder and hair benefits"
+          class="trust-img"
+          width="300"
+          height="400"
+          loading="lazy"
+        />
+        <img
+          src="https://www.fitandfoodtamil.com/cdn/shop/files/image6_300x.png?v=1721895074"
+          alt="Screenshot of WhatsApp chat conversation with customer about using shikakai powder and hair benefits"
+          class="trust-img"
+          width="300"
+          height="400"
+          loading="lazy"
+        />
+        <img
+          src="https://www.fitandfoodtamil.com/cdn/shop/files/image6_300x.png?v=1721895074"
+          alt="Screenshot of WhatsApp chat conversation with customer about using shikakai powder and hair benefits"
+          class="trust-img"
+          width="300"
+          height="400"
+          loading="lazy"
+        />
+        <img
+          src="https://www.fitandfoodtamil.com/cdn/shop/files/image6_300x.png?v=1721895074"
+          alt="Screenshot of WhatsApp chat conversation with customer about using shikakai powder and hair benefits"
+          class="trust-img"
+          width="300"
+          height="400"
+          loading="lazy"
+        />
+      </div>
+    </section>
+  </div>
+<section class="newsletter-section" aria-label="Subscribe to newsletter">
+    <h3>Subscribe to our newsletter</h3>
+    <p>Promotions, new products and sales. Directly to your Inbox.</p>
+    <form class="newsletter-form" role="search" aria-label="Subscribe to newsletter form">
+      <input
+        type="email"
+        placeholder="Email address"
+        aria-label="Email address"
+        required
+      />
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+ <!-- Back to Top -->
+  <div class="backtop">Back to the top ▲</div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <!-- Left -->
+      <div class="footer-col footer-left">
+        <img src="Assets/fit and foo logo.avif" alt="logo" class="footer-logo"/>
+        <div class="footer-text">
+          <p><strong>Fit and Food Tamil</strong><br>
+          TNHB Colony,<br>
+          Villapuram Housing Board,<br>
+          Madurai 625011.<br>
+          +91 9363599986</p>
+          <p>FSSAI: 12422012002821</p>
+        </div>
+      </div>
+
+      <!-- Middle -->
+      <div class="footer-col">
+        <a href="index.html">Home</a>
+        <a href="Template/ourcollection.html">Our Collections</a>
+        <a href="Template/About.html">About Us</a>
+        <a href="Template/contact.html">Contact Us</a>
+      </div>
+
+      <!-- Right -->
+      <div class="footer-col">
+        <a href="Template/privacy.html">Privacy Policy</a>
+        <a href="Template/shippingpolicy.html"> Shipping policy</a>
+        <a href="Template/returnandrefund.html">Return & Refund Policy</a>
+        <a href="Template/termsandconditions.html">Terms & Conditions</a>
+      </div>
+
+      <!-- Socials -->
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <!-- Bottom strip -->
+    <div class="footer-bottom">
+      <div class="currency">India (INR ₹)</div>
+      <div>
+        Copyright © 2025 fitandfoodtamil<br>
+        Powered by Ekommerce360
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp -->
+  <a class="whats" href="https://wa.me/919363599986" target="_blank" title="WhatsApp">
+    <img src="Assets/whatsapp image.png" alt="whats" />
+  </a>
+
+
+  <script>
+    // Trust images carousel scroll
+    const carousel = document.getElementById("carousel");
+    const scrollLeftBtn = document.getElementById("scrollLeftBtn");
+    const scrollRightBtn = document.getElementById("scrollRightBtn");
+
+    scrollLeftBtn.addEventListener("click", () => {
+      carousel.scrollBy({ left: -320, behavior: "smooth" });
+    });
+
+    scrollRightBtn.addEventListener("click", () => {
+      carousel.scrollBy({ left: 320, behavior: "smooth" });
+    });
+
+    // Reviews carousel scroll
+const reviewsCarousel = document.getElementById("reviewsCarousel");
+const scrollLeftReviews = document.getElementById("scrollLeftReviews");
+const scrollRightReviews = document.getElementById("scrollRightReviews");
+
+const cardStyle = getComputedStyle(reviewsCarousel.children[0]);
+const cardWidth = reviewsCarousel.children[0].offsetWidth + parseInt(cardStyle.marginRight);
+
+let autoScrollInterval;
+let isAnimating = false;
+
+// Improved scroll right with better timing
+function scrollRight() {
+    if (isAnimating) return;
+    isAnimating = true;
+    
+    reviewsCarousel.style.scrollBehavior = 'smooth';
+    reviewsCarousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
+
+    // Better timing: wait for scroll to complete before DOM manipulation
+    setTimeout(() => {
+        reviewsCarousel.style.scrollBehavior = 'auto';
+        // Move first card to the end for seamless infinite loop
+        reviewsCarousel.appendChild(reviewsCarousel.children[0]);
+        reviewsCarousel.scrollLeft -= cardWidth;
+        isAnimating = false;
+    }, 550); // Slightly longer than CSS transition
+}
+
+// Improved scroll left with better timing
+function scrollLeft() {
+    if (isAnimating) return;
+    isAnimating = true;
+    
+    reviewsCarousel.style.scrollBehavior = 'auto';
+    // Move last card to the start first
+    reviewsCarousel.insertBefore(reviewsCarousel.children[reviewsCarousel.children.length - 1], reviewsCarousel.children[0]);
+    reviewsCarousel.scrollLeft += cardWidth;
+
+    // Scroll visually left with smooth behavior
+    setTimeout(() => {
+        reviewsCarousel.style.scrollBehavior = 'smooth';
+        reviewsCarousel.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+        isAnimating = false;
+    }, 50); // Small delay to ensure DOM update is processed
+}
+
+// Enhanced auto-scroll with animation check
+function startAutoScroll() {
+    stopAutoScroll();
+    autoScrollInterval = setInterval(() => {
+        if (!isAnimating) {
+            scrollRight();
+        }
+    }, 2500); // Slightly longer interval
+}
+
+// Pause auto-scroll
+function stopAutoScroll() {
+    clearInterval(autoScrollInterval);
+}
+
+// Improved manual button click handlers
+scrollLeftReviews.addEventListener('click', () => {
+    stopAutoScroll();
+    scrollLeft();
+    // Restart auto-scroll after a delay
+    setTimeout(startAutoScroll, 3500);
+});
+
+scrollRightReviews.addEventListener('click', () => {
+    stopAutoScroll();
+    scrollRight();
+    // Restart auto-scroll after a delay
+    setTimeout(startAutoScroll, 3500);
+});
+
+// Enhanced hover handling
+let hoverTimeout;
+reviewsCarousel.addEventListener('mouseenter', () => {
+    clearTimeout(hoverTimeout);
+    stopAutoScroll();
+});
+
+reviewsCarousel.addEventListener('mouseleave', () => {
+    // Small delay before restarting to prevent immediate triggering
+    hoverTimeout = setTimeout(startAutoScroll, 300);
+});
+
+// Add CSS for smoother native scrolling
+reviewsCarousel.style.scrollBehavior = 'smooth';
+reviewsCarousel.style.overflowX = 'auto';
+reviewsCarousel.style.scrollSnapType = 'x mandatory';
+reviewsCarousel.style.scrollPadding = '0px';
+
+// Add scroll snap to children for better alignment
+Array.from(reviewsCarousel.children).forEach(child => {
+    child.style.scrollSnapAlign = 'start';
+});
+
+// Handle window resize to recalculate card width
+window.addEventListener('resize', () => {
+    stopAutoScroll();
+    // Recalculate card width
+    const newCardWidth = reviewsCarousel.children[0].offsetWidth + parseInt(cardStyle.marginRight);
+    // Update scroll position if needed
+    if (Math.abs(newCardWidth - cardWidth) > 5) {
+        reviewsCarousel.scrollLeft = Math.round(reviewsCarousel.scrollLeft / cardWidth) * newCardWidth;
+    }
+    setTimeout(startAutoScroll, 1000);
+});
+
+// Start auto-scroll initially with a small delay
+setTimeout(startAutoScroll, 1000);
+
+  </script>
+  
+
+  <!-- JS -->
+<script>
+const slides = document.querySelector('.slides');
+const slideImages = document.querySelectorAll('.slides img');
+const buttons = document.querySelectorAll('.buttons button');
+
+let currentIndex = 0;
+let slideInterval;
+const slideCount = slideImages.length - 1; // last one is clone
+
+function goToSlide(index) {
+  slides.style.transition = "transform 0.8s ease-in-out";
+  currentIndex = index;
+  slides.style.transform = `translateX(${-index * 100}%)`;
+
+  updateButtons();
+}
+
+// update active button
+function updateButtons() {
+  buttons.forEach((btn, i) => {
+    btn.classList.toggle("active", i === currentIndex % slideCount);
+  });
+}
+
+function nextSlide() {
+  currentIndex++;
+  slides.style.transition = "transform 0.8s ease-in-out";
+  slides.style.transform = `translateX(${-currentIndex * 100}%)`;
+
+  if (currentIndex === slideCount) {
+    // wait for transition to finish before resetting instantly
+    setTimeout(() => {
+      slides.style.transition = "none"; 
+      slides.style.transform = "translateX(0)";
+      currentIndex = 0;
+      updateButtons();
+    }, 800); // match transition duration
+  }
+  updateButtons();
+}
+
+// auto slide every 5 sec
+function startAutoSlide() {
+  slideInterval = setInterval(nextSlide, 5000);
+}
+
+function stopAutoSlide() {
+  clearInterval(slideInterval);
+}
+
+// pause on hover
+const slider = document.querySelector('.slider');
+slider.addEventListener("mouseenter", stopAutoSlide);
+slider.addEventListener("mouseleave", startAutoSlide);
+
+// start
+startAutoSlide();
+updateButtons();
+
+const slider2 = document.getElementById("slider2");
+const wrapper2 = document.querySelector(".our-care");
+const prevBtn2 = document.querySelector(".prev");
+const nextBtn2 = document.querySelector(".next");
+
+// 1. Clone all slides
+let items2 = Array.from(slider2.querySelectorAll(".our-care-item"));
+items2.forEach(item => {
+  slider2.appendChild(item.cloneNode(true)); // append clone
+});
+items2.forEach(item => {
+  slider2.insertBefore(item.cloneNode(true), slider2.firstChild); // prepend clone
+});
+
+// 2. Update references
+let allSlides2 = slider2.querySelectorAll(".our-care-item");
+let index2 = items2.length; // start at the first REAL slide (after prepended clones)
+let step2 = items2[0].offsetWidth + 12;
+
+// Position correctly
+slider2.style.transform = `translateX(-${index2 * step2}px)`;
+
+// Resize handling
+window.addEventListener("resize", () => {
+  step2 = items2[0].offsetWidth + 12;
+  slider2.style.transition = "none";
+  slider2.style.transform = `translateX(-${index2 * step2}px)`;
+});
+
+function showSlide2() {
+  slider2.style.transition = "transform 0.6s ease-in-out";
+  slider2.style.transform = `translateX(-${index2 * step2}px)`;
+}
+
+function nextSlide2() {
+  index2++;
+  showSlide2();
+}
+
+function prevSlide2() {
+  index2--;
+  showSlide2();
+}
+
+// 3. Loop seamlessly
+slider2.addEventListener("transitionend", () => {
+  if (index2 >= allSlides2.length - items2.length) {
+    slider2.style.transition = "none";
+    index2 = items2.length; // reset to first real slide
+    slider2.style.transform = `translateX(-${index2 * step2}px)`;
+  }
+  if (index2 < items2.length) {
+    slider2.style.transition = "none";
+    index2 = allSlides2.length - items2.length - 1; // reset to last real slide
+    slider2.style.transform = `translateX(-${index2 * step2}px)`;
+  }
+});
+
+// 4. Auto slide
+let autoSlide2;
+function startAutoSlide2() {
+  stopAutoSlide2();
+  autoSlide2 = setInterval(nextSlide2, 2500);
+}
+function stopAutoSlide2() {
+  if (autoSlide2) clearInterval(autoSlide2);
+}
+startAutoSlide2();
+
+wrapper2.addEventListener("mouseenter", stopAutoSlide2);
+wrapper2.addEventListener("mouseleave", startAutoSlide2);
+
+nextBtn2.addEventListener("click", () => {
+  stopAutoSlide2();
+  nextSlide2();
+  startAutoSlide2();
+});
+prevBtn2.addEventListener("click", () => {
+  stopAutoSlide2();
+  prevSlide2();
+  startAutoSlide2();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const carousel = document.getElementById('videoCarousel');
+  if (!carousel) return; // prevent error if element not found
+
+  const cards = carousel.querySelectorAll('.card');
+  const gap = 16; // same as CSS gap
+  let cardWidth = cards[0].offsetWidth + gap;
+
+  // Recalculate width on resize
+  window.addEventListener("resize", () => {
+    cardWidth = cards[0].offsetWidth + gap;
+  });
+
+  document.getElementById('scrollNext').addEventListener('click', () => {
+    carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
+  });
+
+  document.getElementById('scrollPrev').addEventListener('click', () => {
+    carousel.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+  });
+});
+const playBtn = document.getElementById('play-button');
+const container = document.getElementById('video-container');
+
+playBtn.addEventListener('click', () => {
+  container.innerHTML = `
+    <iframe 
+      width="100%" 
+      height="800px" 
+      src="https://www.youtube.com/embed/-O9nwrkQtR8?si=FxLvv3Yv3vkn9C7Z" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  `;
+});
+// Select all qty buttons
+// Select all quantity containers
+document.querySelectorAll('.qty-addcart').forEach(container => {
+  const input = container.querySelector('.qty-input');
+  const btns = container.querySelectorAll('.qty-btn');
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      let currentValue = parseInt(input.value) || 1;
+
+      if (btn.textContent.trim() === '+') {
+        currentValue++;
+      } else if (btn.textContent.trim() === '−') {
+        currentValue = Math.max(1, currentValue - 1); // prevent going below 1
+      }
+
+      input.value = currentValue;
+    });
+  });
+});
+
+    document.querySelector('.backtop')
+      .addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+    const modal = document.getElementById("productModal");
+    const closeBtn = document.querySelector(".close");
+    const qtyInput = document.getElementById("qtyInput");
+    const minusBtn = document.getElementById("minusBtn");
+    const plusBtn = document.getElementById("plusBtn");
+
+    // Open modal
+    document.querySelectorAll('.card .btn').forEach((btn) => {
+      btn.addEventListener("click", () => {
+        let card = btn.closest(".card");
+        document.getElementById("modalTitle").innerText = card.querySelector("h3").innerText;
+        document.getElementById("modalPrice").innerText = card.querySelector(".price strong").innerText;
+        document.getElementById("modalImg").src = card.querySelector(".main-img").src;
+        modal.style.display = "flex";
+      });
+    });
+
+    // Close modal
+    closeBtn.onclick = () => modal.style.display = "none";
+    window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; };
+
+    // Quantity controls
+    minusBtn.onclick = () => { if (qtyInput.value > 1) qtyInput.value--; };
+    plusBtn.onclick = () => qtyInput.value++;
+
+
+    const cartBtn = document.querySelector('.im2'); // works with class
+  const cartSidebar = document.getElementById('cart-sidebar');
+  const closeCart = document.getElementById('back-link');
+  const subtotalEl = document.querySelector('.subtotal-price');
+  const productCountEl = document.getElementById('product-count');
+
+  // Open Cart
+  cartBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    cartSidebar.classList.add('open');
+  });
+
+  // Close Cart
+  closeCart.addEventListener('click', () => {
+    cartSidebar.classList.remove('open');
+  });
+
+  // Toggle Products Section
+  document.getElementById("products-header").addEventListener("click", function () {
+    document.querySelectorAll(".cart-item").forEach(item => {
+      item.style.display = (item.style.display === "none") ? "flex" : "none";
+    });
+  });
+
+  // Update subtotal function
+  function updateSubtotal() {
+    let subtotal = 0;
+    let itemCount = 0;
+
+    document.querySelectorAll(".cart-item").forEach(item => {
+      const qty = parseInt(item.querySelector(".qty").textContent);
+      const price = parseInt(item.getAttribute("data-price"));
+      const total = qty * price;
+
+      item.querySelector(".item-total").textContent = total;
+      subtotal += total;
+      itemCount++;
+    });
+
+    subtotalEl.textContent = `Rs. ${subtotal}.00`;
+
+    // Update product count
+    if (itemCount > 0) {
+      productCountEl.textContent = `(${itemCount})`;
+      productCountEl.style.display = "inline";
+    } else {
+      productCountEl.style.display = "none";
+    }
+  }
+
+  // Quantity + / - / remove
+  document.querySelectorAll(".cart-item").forEach(item => {
+    const qtyEl = item.querySelector(".qty");
+    const plusBtn = item.querySelector(".plus");
+    const minusBtn = item.querySelector(".minus");
+    const removeBtn = item.querySelector(".remove");
+
+    plusBtn.addEventListener("click", () => {
+      let qty = parseInt(qtyEl.textContent);
+      qty++;
+      qtyEl.textContent = qty;
+      updateSubtotal();
+    });
+
+    minusBtn.addEventListener("click", () => {
+      let qty = parseInt(qtyEl.textContent);
+      if (qty > 1) {
+        qty--;
+        qtyEl.textContent = qty;
+        updateSubtotal();
+      }
+    });
+
+    removeBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      item.remove();
+      updateSubtotal();
+    });
+  });
+
+  // Initialize subtotal on load
+  updateSubtotal();
+
+  function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("active");
+}
+
+function toggleSearch() {
+  document.getElementById("mobileSearch").classList.toggle("active");
+}
+
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("active");
+}
+
+function openPanel(panelId) {
+  // Hide all panels
+  document.querySelectorAll(".menu-panel").forEach(p => p.classList.remove("active"));
+  // Show requested one
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000, // Animation duration
+            easing: 'ease-in-out', // Easing type
+            once: false, // Whether animation should happen only once
+            mirror: true, // Whether elements should animate out while scrolling past them
+        });
+    </script>
+    <script>
+    function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("active");
+}
+
+function toggleSearch() {
+  document.getElementById("mobileSearch").classList.toggle("active");
+}
+
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("active");
+}
+
+function openPanel(panelId) {
+  // Hide all panels
+  document.querySelectorAll(".menu-panel").forEach(p => p.classList.remove("active"));
+  // Show requested one
+  document.getElementById(panelId).classList.add("active");
+}
+
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const cartBtn = document.querySelector('.im2');   // Button with class
+  const cartSidebar = document.getElementById('cart-sidebar');
+  const closeCart = document.getElementById('back-link');
+  const subtotalEl = document.querySelector('.subtotal-price');
+  const productCountEl = document.getElementById('product-count');
+
+  if (cartBtn) {
+    // Open Cart
+    cartBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      cartSidebar.classList.add('open');
+    });
+  }
+
+  if (closeCart) {
+    // Close Cart
+    closeCart.addEventListener('click', () => {
+      cartSidebar.classList.remove('open');
+    });
+  }
+
+  // Toggle Products Section
+  const productsHeader = document.getElementById("products-header");
+  if (productsHeader) {
+    productsHeader.addEventListener("click", function () {
+      document.querySelectorAll(".cart-item").forEach(item => {
+        item.style.display = (item.style.display === "none") ? "flex" : "none";
+      });
+    });
+  }
+
+  // Update subtotal function
+  function updateSubtotal() {
+    let subtotal = 0;
+    let itemCount = 0;
+
+    document.querySelectorAll(".cart-item").forEach(item => {
+      const qty = parseInt(item.querySelector(".qty").textContent) || 0;
+      const price = parseInt(item.getAttribute("data-price")) || 0;
+      const total = qty * price;
+
+      item.querySelector(".item-total").textContent = total;
+      subtotal += total;
+      itemCount++;
+    });
+
+    if (subtotalEl) {
+      subtotalEl.textContent = `Rs. ${subtotal}.00`;
+    }
+
+    if (productCountEl) {
+      if (itemCount > 0) {
+        productCountEl.textContent = `(${itemCount})`;
+        productCountEl.style.display = "inline";
+      } else {
+        productCountEl.style.display = "none";
+      }
+    }
+  }
+
+  // Quantity + / - / remove
+  document.querySelectorAll(".cart-item").forEach(item => {
+    const qtyEl = item.querySelector(".qty");
+    const plusBtn = item.querySelector(".plus");
+    const minusBtn = item.querySelector(".minus");
+    const removeBtn = item.querySelector(".remove");
+
+    if (plusBtn) {
+      plusBtn.addEventListener("click", () => {
+        let qty = parseInt(qtyEl.textContent) || 0;
+        qty++;
+        qtyEl.textContent = qty;
+        updateSubtotal();
+      });
+    }
+
+    if (minusBtn) {
+      minusBtn.addEventListener("click", () => {
+        let qty = parseInt(qtyEl.textContent) || 0;
+        if (qty > 1) {
+          qty--;
+          qtyEl.textContent = qty;
+          updateSubtotal();
+        }
+      });
+    }
+
+    if (removeBtn) {
+      removeBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        item.remove();
+        updateSubtotal();
+      });
+    }
+  });
+
+  // Initialize subtotal on load
+  updateSubtotal();
+});
+</script>
+
